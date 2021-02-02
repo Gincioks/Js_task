@@ -78,12 +78,16 @@ function vaisiuKaina() {
 }
 
 function vaisiuKainos() {
-    var vaisius = document.getElementById("vaisius");
+    var vaisius = document.getElementById("vaisius").value;
     var kaina = document.getElementById("kaina").value;
     var kiekis = document.getElementById("kiekis").value;
 
-    var kainaPenki = parseInt(kaina) * 5;
+    var galutineKaina = kaina * kiekis;
 
-    console.log("Penkiu %s kaina yra: %d", vaisius, kainaPenki);
+    document.getElementById("pirktiVaisiai").innerText = vaisius;
+    document.getElementById("kainaa").innerText = kaina;
+    document.getElementById("kiekiis").innerText = kiekis;
+    document.getElementById("galutine_kaina").innerText = galutineKaina;
+
 }
 

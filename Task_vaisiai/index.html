@@ -10,17 +10,21 @@
 
 <body>
 
-    <form action="">
-        <input id="vaisius" type="text" placeholder="Vaisius">
-        <input id="kaina" type="number" placeholder="Kaina eurais">
-        <input id="kiekis" type="number" placeholder="Kiekis">
-        <input onclick="vaisiuKainos();" type="submit" value="Skaiciuoti">
-    </form>
+    <input id="vaisius" type="text" placeholder="Vaisius">
+    <input id="kaina" type="number" placeholder="Kaina eurais">
+    <input id="kiekis" type="number" placeholder="Kiekis">
+    <input onclick="vaisiuKainos();" type="submit" value="Skaiciuoti">
 
     <div>
-        <p id="pirktiVaisiai"></p>
-        <p id="pirktiVaisiai"></p>
-
+        <p>
+            Vaisius:
+            <span id="pirktiVaisiai"></span>
+        </p>
+        <p> Vieno vaisiaus kaina:
+            <span id="kainaa"></span>
+        </p>
+        <p>Pirktas kiekis: <span id="kiekiis"></span></p>
+        <p>Galutinė kaina: <span id="galutine_kaina"></span></p>
     </div>
 
     <script src="main.js"></script>
