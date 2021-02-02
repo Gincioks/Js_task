@@ -39,7 +39,6 @@ function did_maz() {
     var x = bendrai();
     var skirtumas = prompt("Irasykite skirtuma");
 
-
     for (i = 0; i < 9; i++) {
         if (i < 5) {
             x += parseInt(skirtumas);
@@ -89,5 +88,23 @@ function vaisiuKainos() {
     document.getElementById("kiekiis").innerText = kiekis;
     document.getElementById("galutine_kaina").innerText = galutineKaina;
 
+}
+
+function pasakosHerojai() {
+    var vaisiai = ["kriaušė", "melionas", "spanguolė", "vynuogė", "vyšnia", "apelsinas"];
+
+    for (i = 0; i < vaisiai.length; i++) {
+        const div = document.createElement("div");
+        div.setAttribute("id", "vaisiuArray");
+        const newContent = document.createTextNode(vaisiai[i]);
+        div.appendChild(newContent);
+        const currentDiv = document.getElementById("vaisiuArray");
+        document.body.insertBefore(div, currentDiv);
+        if (i % 2 == 0) {
+            var element = document.getElementById("vaisiuArray");
+            element.style.backgroundColor = "blue";
+            element.style.color = "white";
+        }
+    }
 }
 
